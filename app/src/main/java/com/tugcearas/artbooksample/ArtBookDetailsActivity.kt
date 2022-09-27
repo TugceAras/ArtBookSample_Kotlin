@@ -43,7 +43,6 @@ class ArtBookDetailsActivity : AppCompatActivity() {
 
         val intent= intent
         changeScreenStatus()
-
     }
 
     private fun changeScreenStatus(){
@@ -133,9 +132,7 @@ class ArtBookDetailsActivity : AppCompatActivity() {
             val intent = Intent(this@ArtBookDetailsActivity,MainActivity::class.java)
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
             startActivity(intent)
-
         }
-
     }
 
     private fun makeSmallerBitmap(image:Bitmap, maximumSize:Int):Bitmap{
@@ -154,7 +151,6 @@ class ArtBookDetailsActivity : AppCompatActivity() {
             height = maximumSize
             val scaledWidth = height / bitmapRatio
             width = scaledWidth.toInt()
-
         }
 
         return Bitmap.createScaledBitmap(image,width,height,true)
@@ -202,8 +198,5 @@ class ArtBookDetailsActivity : AppCompatActivity() {
                 Toast.makeText(this@ArtBookDetailsActivity,"Permission needed!",Toast.LENGTH_LONG).show()
             }
         }
-
-
-
     }
 }
